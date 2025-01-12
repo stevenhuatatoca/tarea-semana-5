@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+
+namespace NumerosDel1Al10
+{
+    class ListaNumeros
+    {
+        private List<int> numeros;
+
+        public ListaNumeros()
+        {
+            numeros = new List<int>();
+        }
+
+        // Método para llenar la lista con números del 1 al 10
+        public void LlenarLista()
+        {
+            for (int i = 1; i <= 10; i++)
+            {
+                numeros.Add(i);
+            }
+        }
+
+        // Método para mostrar los números por pantalla
+        public void MostrarNumeros()
+        {
+            foreach (int numero in numeros)
+            {
+                Console.WriteLine(numero);
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ListaNumeros lista = new ListaNumeros();
+            lista.LlenarLista();
+            Console.WriteLine("Números del 1 al 10:");
+            lista.MostrarNumeros();
+        }
+    }
+}
