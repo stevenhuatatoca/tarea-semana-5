@@ -1,0 +1,30 @@
+using System;
+
+namespace Palindromo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Introduce una palabra: ");
+            string palabra = Console.ReadLine();
+            string palabraInvertida = InvertirCadena(palabra);
+
+            if (palabra.Equals(palabraInvertida, StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("La palabra es un palíndromo.");
+            }
+            else
+            {
+                Console.WriteLine("La palabra no es un palíndromo.");
+            }
+        }
+
+        static string InvertirCadena(string cadena)
+        {
+            char[] caracteres = cadena.ToCharArray();
+            Array.Reverse(caracteres);
+            return new string(caracteres);
+        }
+    }
+}
