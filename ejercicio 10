@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Precios
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<double> precios = new List<double> { 50, 75, 46, 22, 80, 65, 8 };
+
+            double precioMinimo = precios.Min();
+            double precioMaximo = precios.Max();
+
+            Console.WriteLine($"El precio más bajo es: {precioMinimo}");
+            Console.WriteLine($"El precio más alto es: {precioMaximo}");
+        }
+    }
+}
